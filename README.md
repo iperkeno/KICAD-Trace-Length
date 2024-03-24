@@ -23,5 +23,6 @@ Measure trace length and equivalent resistance
 3. press the Plugin icon to execute trace measurement.
 
 ## SRC icons
+
 Icons was created using [Greenfish](http://greenfishsoftware.org/gfie.php).
 Icon sources are in `.gfie` greenfish extension.
