@@ -1,0 +1,35 @@
+{
+    "$schema": "https://go.kicad.org/pcm/schemas/v1",
+    "name": "Trace Length",
+    "description": "Measure trace length and equivalent resistance",
+    "description_full": "Measure trace length and equivalent resistance.",
+    "identifier": "com.github.iperkeno.KICAD-Trace-Length",
+    "type": "plugin",
+    "author": {
+        "name": "Iperkeno",
+        "contact": {
+            "mail": "https://github.com/iperkeno"
+        }
+    },
+    "maintainer": {
+        "name": "Iperkeno",
+        "contact": {
+            "web": "https://github.com/iperkeno/KICAD-Trace-Length"
+        }
+    },
+    "license": "MIT",
+    "resources": {
+        "git": "https://github.com/iperkeno/KICAD-Trace-Length"
+    },
+    "versions": [
+        {
+            "version": "1.0",
+            "status": "stable",
+            "kicad_version": "8.0",
+            "download_sha256": "YOUR_SHA256_HERE",
+            "download_size": 0,
+            "download_url": "https://github.com/YOUR/DOWNLOAD/URL/kicad-beautiful-theme.zip",
+            "install_size": 0
+        }
+    ]
+}
