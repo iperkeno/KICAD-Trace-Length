@@ -60,7 +60,7 @@ class TraceLengthAction(pcbnew.ActionPlugin):
         
         #R_trace = r * trace_length / A       
         wx.MessageBox(	'Copper trace tickness: %.3f' % h 		+ ' mm \n '
-        				'Trace Length =  %.3f' % trace_length 	+ ' mm \n ' 
+        				'Trace Length =  %.1f' % trace_length 	+ ' mm \n ' 
         				'Trace Width  =  %.3f' % w 				+ ' mm \n ' 
         				'Trace Resistence =  %.3f' % R_trace 		+ ' Ohm \n ', 
         				'Info',  wx.OK | wx.ICON_INFORMATION)
