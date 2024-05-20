@@ -10,14 +10,6 @@ import pcbnew
 import wx
 
 class TraceLengthAction(pcbnew.ActionPlugin):
-    """
-    test_by_date: A sample plugin as an example of ActionPlugin
-    Add the date to any text field of the board containing '$date$'
-    How to use:
-    - Add a text on your board with the content '$date$'
-    - Call the plugin
-    - The text will automatically be updated with the date (format YYYY-MM-DD)
-    """
 
     def defaults(self):
         """
