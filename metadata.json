@@ -26,10 +26,10 @@
             "version": "1.0",
             "status": "stable",
             "kicad_version": "8.0",
-            "download_sha256": "YOUR_SHA256_HERE",
-            "download_size": 0,
+            "download_sha256": "f86bdab2078ca508768b7d970a17f1d52f6b2eb10413a14d2e138420d5bc0e41",
+            "download_size": 5.263 ,
             "download_url": "https://github.com/YOUR/DOWNLOAD/URL/kicad-beautiful-theme.zip",
-            "install_size": 0
+            "install_size": 18422 
         }
     ]
 }
