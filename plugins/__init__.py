@@ -26,13 +26,15 @@ class TraceLengthAction(pcbnew.ActionPlugin):
         
     def Run(self):
         pcb = pcbnew.GetBoard()
+
         trace = pcb.GetTracks()
         r = 1.68/100000      # copper resistivity [Ohm * mm^2 / m]
         a = 4.29/1000        # resistivity temperature coefficient     
         trace_length = 0
         R_trace = 0
-        h = 0.035			# coper track segment heigth in mm 
+        h = 0.018			# coper track segment heigth in mm 
         w = 0.0				# coper track segment width in mm 
+        layer = "-"
 
         for item in pcb.GetDrawings():
             if item.GetClass() == "PCB_TEXT":
@@ -40,9 +42,13 @@ class TraceLengthAction(pcbnew.ActionPlugin):
                                  "$date$", item.GetText())
                 if txt == "$date$":
                     item.SetText("%s" % datetime.date.today())
+        
+        des = pcb.GetDesignSettings()
                     
         for track in pcb.GetTracks():
             if track.IsSelected():
+                layer = track.GetLayer()
+                #h = pcb.GetCopperLayer(0).GetCuThickness()
                 track_length = track.GetLength()/1000000
                 trace_length = trace_length + track_length
                 w = track.GetWidth()/1000000 
@@ -51,7 +57,8 @@ class TraceLengthAction(pcbnew.ActionPlugin):
                 R_trace = R_trace + R_track
         
         #R_trace = r * trace_length / A       
-        wx.MessageBox(	'Copper trace tickness: %.3f' % h 		+ ' mm \n '
+        wx.MessageBox(	'Layer: %s' % layer 		+ ' mm \n '
+                        'Copper trace tickness: %.3f' % h 		+ ' mm \n '
         				'Trace Length =  %.1f' % trace_length 	+ ' mm \n ' 
         				'Trace Width  =  %.3f' % w 				+ ' mm \n ' 
         				'Trace Resistence =  %.3f' % R_trace 		+ ' Ohm \n ', 
